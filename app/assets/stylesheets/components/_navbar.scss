@@ -1,0 +1,27 @@
+.navbar-container{
+  display: flex;
+  width: 100vw;
+  background-color: rgb(224, 231, 238);
+  padding:12px;
+  .logo{
+    font-size:20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  .nav-link{
+    text-decoration: none;
+
+  }
+  .nav-user{
+    border-radius: 50%;
+  }
+  .nav-dropdown{
+
+    &.dropdown-open{
+
+    }
+    &.dropdown-close{
+
+    }
+  }
+}
