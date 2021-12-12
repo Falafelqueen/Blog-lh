@@ -1,10 +1,24 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-
-<% @articles.each do |article| %>
-<%= link_to article_path(article) do %>
-<%= article.title %>
-<%= article.content %>
-<%= article.category %>
-<% end %>
-<% end %>
+<div class="container">
+  <h1>Articles</h1>
+  <div class="cards-holder">
+    <% @articles.each do |article| %>
+      <div class="card-container">
+        <img src="" alt="">
+        <div class="card-content">
+          <div class="card-content-main">
+            <%= link_to article_path(article) do %>
+              <h2><%= article.title %></h2>
+            <% end %>
+              <div class="article-content">
+                <%= article.content %>
+              </div>
+          </div>
+          <div class="card-content-foot">
+              <%= article.category %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%=  link_to "Add", articles_new_path %>
+</div>

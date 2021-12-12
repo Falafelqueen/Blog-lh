@@ -1,9 +1,14 @@
 <div class="navbar-container">
 <div class="logo"></div>
+<%= link_to root_path do %>
 <div class="nav-link">About</div>
+<% end %>
+<%=  link_to articles_path do%>
 <div class="nav-link">Blog</div>
+<% end %>
 <div class="nav-link">Projects</div>
 <div class="nav-link">Contact</div>
+<div class="nav-link">Log in</div>
 <div class="nav-user">
 <img src="" alt="" class="user-avatar">
 <div class="nav-dropdown dropdown-open"></div>

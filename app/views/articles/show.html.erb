@@ -1,4 +1,8 @@
 <h1><%= @article.title %></h1>
-<%= @article.content %>
+<div class="article-content">
+<p><%= @article.content %>
+</p>
+</div>
 <%= @article.category %>
 <%= link_to "Back", articles_path %>
+<%= link_to "Edit", edit_article_path(@article) %>
