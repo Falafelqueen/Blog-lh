@@ -11,6 +11,8 @@ require("bootstrap");
 
 import "bootstrap";
 import { addStyleToSelection } from "../components/change_selection";
+import { changeFontSize } from "../components/change";
+import { keepChangedStylingProperties } from "../components/change";
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -21,5 +23,7 @@ import { addStyleToSelection } from "../components/change_selection";
 // import { changeToHTML } from "../components/change";
 document.addEventListener("turbolinks:load", () => {
   // changeToHTML();
+  keepChangedStylingProperties();
   addStyleToSelection();
+  changeFontSize();
 });

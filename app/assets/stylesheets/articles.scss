@@ -8,3 +8,16 @@
     resize:vertical;
   }
 }
+
+:root {
+  --font-color: blue;
+  --title-font-size: 25px;
+}
+
+.article-show{
+  h1{
+    font-size: var(--title-font-size);
+    color: var(--font-color);
+  }
+
+}
