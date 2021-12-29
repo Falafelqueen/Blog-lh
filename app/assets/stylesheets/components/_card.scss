@@ -8,8 +8,13 @@
   border-radius:8px;
   transition:0.5s;
   height: 300px;
-  overflow: hidden;
+  padding: 5px;
   &:hover{
     transform: scale(1.01);
+  }
+  .article-content{
+    max-height:125px;
+    overflow:hidden;
+    border-bottom: 1px solid black;
   }
 }

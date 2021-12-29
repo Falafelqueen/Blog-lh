@@ -1,8 +1,16 @@
-<h1><%= @article.title %></h1>
-<div class="article-content">
-<p><%= @article.content %>
-</p>
+<div class="article-show">
+  <h1><%= @article.title %></h1>
+  <div class="article-content">
+    <p><%= @article.content %>
+    </p>
+  </div>
+  <%= @article.category %>
+  <%= link_to "Back", articles_path %>
+  <%= link_to "Edit", edit_article_path(@article) %>
+  <div class="controls">
+    <label for="title-font-size">Choose fontsize</label>
+    <input type="range" name="title-font-size" min="8" max="55" value="10" data-sizing="px">
+    <label for="font-color">Choose fontsize</label>
+    <input type="color" name="font-color" value="black" data-sizing="">
+  </div>
 </div>
-<%= @article.category %>
-<%= link_to "Back", articles_path %>
-<%= link_to "Edit", edit_article_path(@article) %>
