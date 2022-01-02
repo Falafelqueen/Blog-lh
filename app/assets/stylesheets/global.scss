@@ -1,3 +1,14 @@
+:root{
+  --dark-blue: #080135;
+  --blue:#077763;
+  --whitish:#FFFCFC;
+  --gray:#C1C0C0;
+  --banner-size-heading: 48px;
+  --big-heading: 36px;
+  --heading:30px;
+  --normal-size-text:16px;
+  --smaller-text:20px;
+}
 
 body {
   margin: 0;
@@ -10,4 +21,31 @@ body {
     text-decoration: none;
     color:inherit;
   }
+
+  h1{
+    color: var(--dark-blue);
+    font-size: var(--banner-size-heading);
+  }
+
+  h4{
+    color: var(--blue);
+    font-size: var(--normal-size-text);
+  }
+}
+
+.btn-normal{
+  background-color: var(--blue);
+  color: var(--whitish);
+  font-size: var(--normal-size-text);
+  padding: 8px 26px;
+  text-align: center;
+  height:42px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  p {
+    margin:0px;
+  }
+}
+.btn-normal:hover{
+  background-color:var(--dark-blue);
 }

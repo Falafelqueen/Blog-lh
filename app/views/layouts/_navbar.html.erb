@@ -1,16 +1,32 @@
 <div class="navbar-container">
-<div class="logo"></div>
-<%= link_to root_path do %>
-<div class="nav-link">About</div>
-<% end %>
-<%=  link_to articles_path do%>
-<div class="nav-link">Blog</div>
-<% end %>
-<div class="nav-link">Projects</div>
-<div class="nav-link">Contact</div>
-<div class="nav-link">Log in</div>
-<div class="nav-user">
-<img src="" alt="" class="user-avatar">
-<div class="nav-dropdown dropdown-open"></div>
-</div>
+  <div class="nav-left">
+    <div class="logo">
+      <%= link_to root_path, class: "navbar-logo" do %>
+      <%= image_tag "Logo.svg", alt: "logo" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="nav-link">
+    <%=  link_to "Blog", articles_path , class: "nav-link-text" %>
+    </div>
+    <div class="nav-link">
+    <%= link_to "Learning", root_path, class:"nav-link-text" %>
+    </div>
+    <div class="nav-link">
+    <%= image_tag "Search-icon.svg", alt: "search-icon" %>
+    </div>
+    <%# if user.logged_in? %>
+  <%# %<div class="nav-user">% %>
+  <%# <img src="" alt="" class="user-avatar"> %>
+  <%# <div class="nav-dropdown dropdown-open"></div> %>
+  <%# else %>
+    <div class="nav-link">
+      <div class="btn-normal">
+        <p>Log in</p>
+      </div>
+    </div>
+  <%# end %>
+    <%# </div> %>
+  </div>
 </div>
