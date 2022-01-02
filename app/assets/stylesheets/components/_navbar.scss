@@ -1,28 +1,40 @@
 .navbar-container{
   display: flex;
-  width: 100vw;
-  background-color: rgb(224, 231, 238);
-  padding:12px;
+  width: 90vw;
+  justify-content: space-between;
+  margin:10px auto;
+  a {
+    height:max-content;
+    margin:auto;
+  }
   .logo{
-    font-size:20px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
   }
-  .nav-link{
-    border-right: 2px solid black;
-    padding: 0px 10px;
 
+  .nav-right{
+    display: flex;
+    .nav-link{
+      color: var(--dark-blue);
+      display:flex;
+      justify-content: center;
+      img{
+        height:30px;
+        margin-top:5px;
+      }
   }
-  .nav-user{
-    border-radius: 50%;
   }
-  .nav-dropdown{
+  // .nav-user{
+  //   border-radius: 50%;
+  // }
+  // .nav-dropdown{
 
-    &.dropdown-open{
+  //   &.dropdown-open{
 
-    }
-    &.dropdown-close{
-      display: none;
-    }
-  }
+  //   }
+  //   &.dropdown-close{
+  //     display: none;
+  //   }
+  // }
 }

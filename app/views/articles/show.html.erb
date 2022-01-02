@@ -1,16 +1,83 @@
+
 <div class="article-show">
-  <h1><%= @article.title %></h1>
+    <div class="article-head-text">
+      <div class="info-line-small">
+                <p>Author</p>
+                <p>Jan 01/01/2022</p>
+                <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
+                <p>5</p>
+      </div>
+      <p><%= @article.category %></p>
+      <h1><%= @article.title %></h1>
+    </div>
+
+    <div class="article-head-img">
+    <div class="img-holder">
+      <div class="img-overlay"></div>
+      <%= image_tag "Sample.jpg", class:"card-img" %>
+    </div>
+    </div>
+
   <div class="article-content">
-    <p><%= @article.content %>
-    </p>
+    <h5><%= @article.subtitle %></h5>
+    <p><%= @article.content %></p>
   </div>
-  <%= @article.category %>
+  <div class="article-resources">
+    <h5>Useful resources</h5>
+    <ul>
+      <li><a href="#">Some super useful link</a></li>
+      <li><a href="#">Some super useful link</a></li>
+      <li><a href="#">Some super useful link</a></li>
+      <li><a href="#">Some super useful link</a></li>
+    </ul>
+    <div class="expand-section-btn bottom-right">
+        <%= link_to "More..", articles_path, class: "bold-blue" %>
+      </div>
+  </div>
+  <div class="article-comments">
+    <h5>Comments section</h5>
+  </div>
+
+  <div class="article-related">
+  <div class="inner-content">
+    <h2>Related articles</h2>
+    <div class="card-vertical">
+      <div class="img-holder">
+        <div class="img-overlay"></div>
+        <%= image_tag "Sample.jpg", class: "card-image" %>
+      </div>
+      <div class="article-info">
+        <h4>5 array methods everyone should know by heart</h4>
+      </div>
+    </div>
+
+    <div class="card-vertical">
+      <div class="article-info">
+        <h4>5 array methods everyone should know by heart</h4>
+      </div>
+      <div class="img-holder">
+        <div class="img-overlay"></div>
+        <%= image_tag "Sample.jpg", class: "card-image" %>
+      </div>
+    </div>
+      <div class="expand-section-btn bottom-right">
+        <%= link_to "More..", articles_path, class: "bold-white" %>
+      </div>
+
+  </div>
+  </div>
+
   <%= link_to "Back", articles_path %>
-  <%= link_to "Edit", edit_article_path(@article) %>
+
+  <div class="show-controls btn-normal"><p>Edit</p></div>
   <div class="controls">
+    <%= link_to "Edit article", edit_article_path(@article) %>
     <label for="title-font-size">Choose fontsize</label>
     <input type="range" name="title-font-size" min="8" max="55" value="10" data-sizing="px">
     <label for="font-color">Choose fontsize</label>
     <input type="color" name="font-color" value="black" data-sizing="">
   </div>
+</div>
+
+
 </div>

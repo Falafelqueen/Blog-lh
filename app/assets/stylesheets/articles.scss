@@ -2,6 +2,87 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// index view
+
+.page-section{
+  padding-top: 36px;
+}
+
+// filter bar
+.filter-bar{
+ color:var(--blue);
+ margin: 24px 0px;
+
+ .filter-group{
+   margin:0px 5px;
+   span{
+     padding:5px;
+   }
+ }
+}
+
+// article show
+
+.article-show{
+// top margin
+  margin-top:24px;
+// grid
+  display:grid;
+  grid-template-columns: 55% 40%;
+  gap: 80px;
+  .article-head-img, .article-resources, .article-related{
+    grid-column:2/3;
+  }
+  .article-content, .article-head-text, .article-comments{
+    grid-column:1/2;
+  }
+  // sections
+  .article-head-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--dark-blue);
+  }
+  .article-resources{
+    position:relative;
+  }
+  .article-related{
+    background: var(--dark-blue);
+    width: 100%;
+    h2, h4{
+      color: var(--whitish)
+    }
+    .card-vertical{
+      gap:24px;
+      padding:24px 0px;
+      .img-holder{
+        width:344px;
+        height:116px;
+      }
+    }
+     .inner-content{
+    padding-bottom:24px;
+
+  }
+}
+
+// controls
+.controls{
+  display:none;
+}
+.controls.show{
+  display:block;
+}
+
+.article-show{
+  h1{
+    font-size: var(--title-font-size);
+    color: var(--font-color);
+  }
+
+ }
+}
+
 .simple_form{
   textarea{
     height:500px;
@@ -12,12 +93,4 @@
 :root {
   --font-color: blue;
   --title-font-size: 25px;
-}
-
-.article-show{
-  h1{
-    font-size: var(--title-font-size);
-    color: var(--font-color);
-  }
-
 }
