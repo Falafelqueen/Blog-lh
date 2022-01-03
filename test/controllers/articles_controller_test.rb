@@ -7,17 +7,17 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    get article_url
+    get article_path
     assert_response :success
   end
 
   test "should get create" do
-    post articles_url
+    post articles_path
     assert_response :success
   end
 
   test "should get new" do
-    get articles_new_url
+    get articles_new_path
     assert_response :success
   end
 

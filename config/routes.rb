@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   get 'articles', to: "articles#index"
   get 'article/:id', to: "articles#show", as: :article
   get 'articles/new', to: "articles#new"
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
   patch 'article/:id', to: "articles#update"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
    root to: 'pages#home'
+  get 'signup', to: "users#new"
 end
