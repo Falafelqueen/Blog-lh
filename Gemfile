@@ -60,3 +60,4 @@ gem "simple_form"
 gem 'font-awesome-sass'
 
 gem 'bcrypt', '3.1.13'
+gem 'rails-controller-testing'

@@ -1,3 +1,21 @@
 .btn-centered{
   vertical-align: center;
 }
+
+.btn-normal{
+  background-color: var(--blue);
+  color: var(--whitish);
+  font-size: var(--normal-size-text);
+  padding: 8px 26px;
+  text-align: center;
+  height:42px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  p {
+    margin:0px;
+  }
+}
+
+.btn-normal:hover{
+  background-color:var(--dark-blue);
+}
