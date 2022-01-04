@@ -50,9 +50,12 @@
         <%= image_tag "Sample.jpg", class: "card-image" %>
       </div>
     </div>
-
     <div class="expand-section-btn bottom-right">
       <%= link_to "More..", articles_path, class: "bold-blue" %>
     </div>
-
   </section>
+    <% if current_user %>
+    <div class="btn-normal">
+    <%= link_to "User profile", user_path(current_user)%>
+    </div>
+   <% end %>

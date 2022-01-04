@@ -27,6 +27,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template "articles/index"
+    assert logged_in?
   end
 
 end

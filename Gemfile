@@ -61,3 +61,4 @@ gem 'font-awesome-sass'
 
 gem 'bcrypt', '3.1.13'
 gem 'rails-controller-testing'
+gem 'jquery-rails'
