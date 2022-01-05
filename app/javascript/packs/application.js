@@ -9,7 +9,6 @@ require("@rails/activestorage").start();
 require("channels");
 require("bootstrap");
 require("jquery");
-require("jquery_ujs");
 
 import "bootstrap";
 import { addStyleToSelection } from "../components/change_selection";

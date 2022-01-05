@@ -2,8 +2,8 @@
 <div class="article-show">
     <div class="article-head-text">
       <div class="info-line-small">
-                <p>Author</p>
-                <p>Jan 01/01/2022</p>
+                <p><%= @article.user.username %></p>
+                <p><<%= @article.created_at %>/p>
                 <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
                 <p>5</p>
       </div>
