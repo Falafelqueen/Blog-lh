@@ -5,10 +5,13 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @article_resources = @article.resources
   end
 
   def new
     @article = Article.new
+    @article.resources.build
+
   end
 
   def create
@@ -37,6 +40,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :content ,:category, :resources)
+    params.require(:article).permit(:title, :content ,:category, resources_attributes:[:title, :link, :categories])
   end
 end

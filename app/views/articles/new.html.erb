@@ -5,9 +5,15 @@
 <%= f.input :title %>
 <%= f.input :content %>
 <%= f.input :category %>
+<h5>Resources</h5>
 <%= f.simple_fields_for :resources do |resource| %>
+<div class="fieldset-container">
+<fieldset id="0">
   <%= resource.input :title %>
   <%= resource.input :link %>
   <% end %>
+</fieldset>
+</div>
+  <div id="addResource" class="btn-normal">Add another resource</div>
 <%= f.submit "submit" %>
 <% end %>
