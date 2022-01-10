@@ -1,7 +1,5 @@
-console.log(document);
 const articleShow = document.querySelector(".article-show");
 const textContent = articleShow.querySelector(".article-content");
-console.log(textContent);
 
 const styleSelection = () => {
   if (articleShow) {
