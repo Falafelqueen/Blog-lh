@@ -5,5 +5,9 @@
 <%= f.input :title %>
 <%= f.input :content %>
 <%= f.input :category %>
+<%= f.simple_fields_for :resources do |resource| %>
+  <%= resource.input :title %>
+  <%= resource.input :link %>
+  <% end %>
 <%= f.submit "submit" %>
 <% end %>
