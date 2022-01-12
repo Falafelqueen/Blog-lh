@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_174910) do
+ActiveRecord::Schema.define(version: 2022_01_12_142820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 2022_01_10_174910) do
   create_table "resources", force: :cascade do |t|
     t.string "title"
     t.string "link"
+    t.text "categories", array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "categories", array: true
     t.bigint "article_id"
     t.index ["article_id"], name: "index_resources_on_article_id"
   end
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_174910) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
+    t.string "remember_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

@@ -22,11 +22,15 @@
   <%# <div class="nav-dropdown dropdown-open"></div> %>
   <%# else %>
     <div class="nav-link">
+  <% if !current_user %>
       <div class="btn-normal">
       <%= link_to login_path do %>
         <p>Log in</p>
         <% end %>
       </div>
+      <% else %>
+      <%= image_tag "person.svg" %>
+    <% end %>
     </div>
   <%# end %>
     <%# </div> %>
