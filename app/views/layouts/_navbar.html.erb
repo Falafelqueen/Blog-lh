@@ -29,7 +29,9 @@
         <% end %>
       </div>
       <% else %>
+      <%= link_to user_path(current_user) do %>
       <%= image_tag "person.svg" %>
+    <% end %>
     <% end %>
     </div>
   <%# end %>

@@ -32,8 +32,8 @@
         <div class="card-content">
 
           <div class="info-line-small">
-            <p>Author</p>
-            <p>Jan 01/01/2022</p>
+            <p><%= article.user.username %></p>
+            <p><%= article.created_at.strftime("%d-%m-%Y") %></p>
             <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
             <p>5</p>
           </div>
@@ -52,5 +52,6 @@
     <% end %>
   </div>
 </div>
-
+  <% if current_user %>
   <%=  link_to "Add", articles_new_path %>
+  <% end %>
