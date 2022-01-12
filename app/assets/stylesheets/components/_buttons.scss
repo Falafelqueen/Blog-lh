@@ -22,3 +22,11 @@
 .btn-normal:hover{
   background-color:var(--dark-blue);
 }
+
+.btn-icon{
+  color:var(--blue);
+  cursor:pointer;
+  &:hover{
+    color:var(--dark-blue)
+  }
+}

@@ -3,7 +3,7 @@
     <div class="article-head-text">
       <div class="info-line-small">
                 <p><%= @article.user.username %></p>
-                <p><%= @article.created_at %></p>
+                <p><%= @article.created_at.strftime("%d-%m-%Y") %></p>
                 <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
                 <p>5</p>
       </div>
@@ -26,7 +26,7 @@
     <h5>Useful resources</h5>
     <ul>
     <% @article_resources.each do |article_resource| %>
-      <li><a href="<%=article_resource.link%>"><%= article_resource.title %></a></li>
+      <li><a href="#"><%= article_resource.title %></a></li>
     <% end %>
     </ul>
     <div class="expand-section-btn bottom-right">

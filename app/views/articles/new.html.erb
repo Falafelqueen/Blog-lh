@@ -3,17 +3,20 @@
 
 <%= simple_form_for @article do |f|%>
 <%= f.input :title %>
+<%= f.input :subtitle %>
 <%= f.input :content %>
 <%= f.input :category %>
 <h5>Resources</h5>
 <%= f.simple_fields_for :resources do |resource| %>
 <div class="fieldset-container">
-<fieldset id="0">
-  <%= resource.input :title %>
-  <%= resource.input :link %>
-  <% end %>
-</fieldset>
+  <fieldset id="0">
+    <%= resource.input :title %>
+    <%= resource.input :link %>
+    <% end %>
+  </fieldset>
 </div>
+
   <div id="addResource" class="btn-normal">Add another resource</div>
+  <div id="removeResource" class="btn-icon"><i class="fas fa-trash-alt"></i></div>
 <%= f.submit "submit" %>
 <% end %>

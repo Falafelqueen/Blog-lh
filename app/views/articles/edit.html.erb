@@ -1,6 +1,7 @@
 <div class="container">
 <%= simple_form_for @article do |f|%>
 <%= f.input :title %>
+<%= f.input :subtitle %>
 <%= f.input :content,  input_html: {class: "input-for-article-text"}%>
 <%= f.input :category %>
 <%= f.submit "Edit" %>
