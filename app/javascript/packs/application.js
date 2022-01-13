@@ -29,3 +29,6 @@ document.addEventListener("turbolinks:load", () => {
   }
   // changeToHTML();
 });
+
+require("trix")
+require("@rails/actiontext")
