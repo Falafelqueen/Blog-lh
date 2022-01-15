@@ -13,11 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+@import "actiontext";
 @import "bootstrap/scss/bootstrap";
 @import "components/navbar";
 @import "global";
 @import "articles";
-@import "components/actiontext";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "trix/dist/trix"

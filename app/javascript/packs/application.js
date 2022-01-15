@@ -10,6 +10,9 @@ require("channels");
 require("bootstrap");
 require("jquery");
 
+require("trix")
+require("@rails/actiontext")
+
 import "bootstrap";
 // import { addStyleToSelection } from "../components/change_selection";
 // import { changeFontSize } from "../components/change";
@@ -29,6 +32,3 @@ document.addEventListener("turbolinks:load", () => {
   }
   // changeToHTML();
 });
-
-require("trix")
-require("@rails/actiontext")
