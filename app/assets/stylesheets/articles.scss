@@ -66,31 +66,23 @@
 
 }
 
-// controls
-.controls{
-  display:none;
-}
-.controls.show{
-  display:block;
 }
 
-.article-show{
-  h1{
-    font-size: var(--title-font-size);
-    color: var(--font-color);
-  }
-
- }
-}
+// article new
 
 .simple_form{
-  textarea{
-    height:500px;
-    resize:vertical;
-  }
-}
+&.new_article{
+    text-align: left;
 
-:root {
-  --font-color: blue;
-  --title-font-size: 25px;
+    trix-editor{
+      height:500px;
+      resize:vertical;
+      text-align:left;
+      margin-bottom:1rem;
+    }
+    input[type="submit"]{
+      display: block;
+      margin:0 auto;
+    }
+  }
 }
