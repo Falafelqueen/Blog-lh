@@ -8,7 +8,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' , defer: true %>
   </head>
   <body>
+  <% if content_for?(:navbar) %>
+    <%= yield(:navbar) %>
+
+  <% else %>
   <%= render "layouts/navbar" %>
+  <% end %>
+
   <div class="container">
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%=message_type%>"><%= message %></div>
