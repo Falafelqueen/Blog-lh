@@ -18,6 +18,7 @@
       </div>
       <div class="article-info">
         <div class="info-line-small">
+        <% if @article_newst %>
           <p><%=@article_newest.user.username %></p>
           <p><%= @article_newest.created_at.strftime("%d-%m-%Y") %></p>
           <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
@@ -29,11 +30,13 @@
           <p><%= @article_newest.category %></p>
         </div>
       </div>
+      <% end %>
     </div>
     <%# end of blog card %>
      <div class="card-left">
      <%= %>
       <div class="article-info">
+      <% if @article_second_newest %>
         <div class="info-line-small">
           <p><%= @article_second_newest.user.username %></p>
           <p><%= @article_second_newest.created_at.strftime("%d-%m-%Y") %></p>
@@ -45,6 +48,7 @@
           <div class="short-line"></div>
           <p><%= @article_second_newest.category %></p>
         </div>
+        <% end %>
       </div>
       <div class="img-holder">
         <div class="img-overlay"></div>
