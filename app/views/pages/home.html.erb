@@ -18,7 +18,7 @@
       </div>
       <div class="article-info">
         <div class="info-line-small">
-        <% if @article_newst %>
+        <% if @article_newest %>
           <p><%=@article_newest.user.username %></p>
           <p><%= @article_newest.created_at.strftime("%d-%m-%Y") %></p>
           <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
