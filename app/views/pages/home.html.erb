@@ -24,7 +24,9 @@
           <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
           <p>5</p>
         </div>
+        <% link_to article_path(@article_newest) do %>
         <h3><%= @article_newest.title %></h3>
+        <% end %>
         <div class="bottom-right">
           <div class="short-line"></div>
           <p><%= @article_newest.category %></p>
@@ -43,7 +45,9 @@
           <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
           <p>5</p>
         </div>
+        <%= link_to article_path(@article_second_newest) do%>
         <h3><%= @article_second_newest.title %></h3>
+        <% end %>
         <div class="bottom-right">
           <div class="short-line"></div>
           <p><%= @article_second_newest.category %></p>
