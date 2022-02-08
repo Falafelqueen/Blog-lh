@@ -21,6 +21,37 @@ RSpec.feature "UserArticleActions", type: :feature do
 
       expect(page).to have_css ".info-line-small p", text: @user.username
     end
+
+    scenario "can`t see log-in button" do
+      visit login_path
+      fill_in "Email", with: @user.email
+      fill_in "Password", with: @user.password
+      click_on "Log in"
+
+      expect(page).not_to have_css ".btn-normal p", text: "Log in"
+      expect(page).to have_css ".user-icon"
+    end
+
+    scenario "can see add new article on articles index" do
+      visit login_path
+      fill_in "Email", with: @user.email
+      fill_in "Password", with: @user.password
+      click_on "Log in"
+
+      expect(page).to have_css "a", text: "Add"
+    end
+
+    scenario "can visit their own profile" do
+      visit login_path
+      fill_in "Email", with: @user.email
+      fill_in "Password", with: @user.password
+      click_on "Log in"
+
+      find(:xpath, "//a/img[@class='user-icon']/.").click
+      expect(page).to have_css "p", text: @user.username
+
+    end
+
   end
 
 end

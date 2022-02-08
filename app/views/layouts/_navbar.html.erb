@@ -30,7 +30,7 @@
       </div>
       <% else %>
       <%= link_to user_path(current_user) do %>
-      <%= image_tag "person.svg" %>
+      <%= image_tag "person.svg", class: "user-icon", alt: "user-icon" %>
     <% end %>
     <% end %>
     </div>
