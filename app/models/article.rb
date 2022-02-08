@@ -3,5 +3,5 @@ class Article < ApplicationRecord
   has_many :resources
   accepts_nested_attributes_for :resources
   has_rich_text :rich_body
-  validates :title,:subtitle,:category,  presence: true
+  validates :title,:subtitle,:category, :rich_body, presence: true
 end

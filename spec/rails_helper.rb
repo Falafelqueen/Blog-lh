@@ -57,6 +57,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.include Features, type: :feature
+  config.include FactoryBot::Syntax::Methods
   # Filter lines from Rails gems in backtraces.
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
