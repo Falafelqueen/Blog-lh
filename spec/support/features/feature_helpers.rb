@@ -8,4 +8,8 @@ module Features
     find(:xpath, "//*[@id='#{id}']", visible: false)
   end
 
+  def current_user
+    
+  end
+
 end

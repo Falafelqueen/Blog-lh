@@ -1,6 +1,11 @@
 class ArticlesController < ApplicationController
   def index
+
+    if params[:query].present?
+      @articles = Article.search(params[:query])
+    else
     @articles = Article.all.order(created_at: :desc)
+    end
   end
 
   def show

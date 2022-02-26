@@ -1,10 +1,17 @@
 require "rails_helper"
 
 feature "User creates a new article" do
+
+   before(:all) do
+    @user = build(:user)
+  end
+
+
+
   scenario "Successfully" do
     visit login_path
-    fill_in "Email", with: "example@example.com"
-    fill_in "Password", with: "example"
+    fill_in "Email", with: @user.email
+    fill_in "Password", with: @user.password
     click_on "Log in"
 
     click_on "Add"
