@@ -4,6 +4,10 @@
     <span><%= image_tag "Filter-icon.svg", class:"filter-icon" %></span>
     <p>Category</p>
     <div class="filter-group">
+    <%= form_tag articles_path, method: :get do  %>
+        <%= check_box_tag :filter_option, params[:filter_option] %>
+        <%= submit_tag "Search", style: "display:none" %>
+    <% end %>
     <span><%= image_tag "JS-icon.svg", class:"filter-icon" %></span>
     <span><%= image_tag "Ruby-icon.svg", class:"filter-icon" %></span>
     <span><%= image_tag "Rails-icon.svg", class:"filter-icon" %></span>

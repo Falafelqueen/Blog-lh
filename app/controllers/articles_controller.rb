@@ -1,11 +1,15 @@
 class ArticlesController < ApplicationController
   def index
-
-    if params[:query].present?
+    if params[:query].present? || params[:filter_option]
+      if params[:query].present?
       @articles = Article.search(params[:query])
+      else
+        @articles = Article.filter(params[:filter_option])
+      end
     else
     @articles = Article.all.order(created_at: :desc)
     end
+
   end
 
   def show

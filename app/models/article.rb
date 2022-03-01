@@ -18,4 +18,9 @@ class Article < ApplicationRecord
     end
     return matching_articles
   end
+
+  def self.filter(filter_option)
+    articles = Article.where(category: filter_option)
+  end
+
 end

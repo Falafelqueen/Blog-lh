@@ -16,10 +16,10 @@
     <div class="nav-link">
     <%= form_tag articles_path, method: :get do  %>
     <%= text_field_tag :query,
-    params[:query] %>
+    params[:query], class: "search-bar" %>
     <%= submit_tag "Search", style: "display:none" %>
     <% end %>
-    <%= image_tag "Search-icon.svg", alt: "search-icon" %>
+    <%= image_tag "Search-icon.svg", class: "search-icon", alt: "search-icon" %>
     </div>
     <%# if user.logged_in? %>
   <%# %<div class="nav-user">% %>
