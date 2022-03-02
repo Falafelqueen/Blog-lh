@@ -25,6 +25,31 @@
       }
   }
   }
+
+  .search-bar{
+    margin: 5px 5px 0px;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease-in;
+    border: 0px;
+    border-bottom: 1px solid var(--dark-blue);
+  }
+
+.search-bar.active{
+  width: 200px;
+  opacity:1;
+  background-color: var(--whitish);
+}
+
+.search-bar.active:focus{
+  outline: none;
+  color: var(--dark-blue);
+}
+  .search-icon{
+    cursor: pointer;
+  }
+
+
   // .nav-user{
   //   border-radius: 50%;
   // }

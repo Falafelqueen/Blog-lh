@@ -4,6 +4,7 @@ RSpec.describe Article, type: :model do
   before(:all) do
     @user = User.create(username:"example2", email: "example2@example.com", password: "example")
   end
+
   after(:all) do
     @user.delete
   end

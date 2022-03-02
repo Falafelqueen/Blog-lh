@@ -1,10 +1,16 @@
 require 'rails_helper'
 
 RSpec.feature "UserArticleActions", type: :feature do
+  before(:all) do
+    @user = User.create(username:"example3", email: "example3@example.com", password: "example")
+  end
+
+  after(:all) do
+    @user.delete
+  end
+
   context "user is logged in" do
-    before(:all) do
-      @user = build(:user)
-    end
+
     scenario "creates an article" do
       visit login_path
       fill_in "Email", with: @user.email
@@ -48,6 +54,7 @@ RSpec.feature "UserArticleActions", type: :feature do
       click_on "Log in"
 
       find(:xpath, "//a/img[@class='user-icon']/.").click
+
       expect(page).to have_css "p", text: @user.username
 
     end

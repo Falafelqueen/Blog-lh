@@ -18,6 +18,7 @@ import "bootstrap";
 // import { changeFontSize } from "../components/change";
 // import { keepChangedStylingProperties } from "../components/change";
 import { addResource } from "../components/add_resources";
+import { animateSearch } from "../components/animate_searchbar";
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -30,5 +31,9 @@ document.addEventListener("turbolinks:load", () => {
   if (document.querySelector(".fieldset-container")) {
     addResource();
   }
+
+    animateSearch();
+
+
   // changeToHTML();
 });
