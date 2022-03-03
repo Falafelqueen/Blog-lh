@@ -4,13 +4,15 @@
     <span><%= image_tag "Filter-icon.svg", class:"filter-icon" %></span>
     <p>Category</p>
     <div class="filter-group">
-    <%= form_tag articles_path, method: :get do  %>
-        <%= check_box_tag :filter_option, params[:filter_option] %>
-        <%= submit_tag "Search", style: "display:none" %>
+    <%= form_with url: articles_path, method: :get , class: "filter-boxes" do |f| %>
+    <span><%= f.label :filter_option1, image_tag("JS-icon.svg", class:"filter-icon") %></span>
+        <%= check_box_tag :filter_option, :TDD, false , id: "filter_option1",onchange: "this.form.submit()"%>
+      <span><%= f.label :filter_option2, image_tag("Ruby-icon.svg", class:"filter-icon") %></span>
+        <%= check_box_tag :filter_option, :Test, false, id:"filter_option2", onchange: "this.form.submit()" %>
+      <span><%= f.label :filter_option, image_tag("Rails-icon.svg", class:"filter-icon") %></span>
+        <%= check_box_tag :filter_option, :ruby, false, onchange: "this.form.submit()" %>
     <% end %>
-    <span><%= image_tag "JS-icon.svg", class:"filter-icon" %></span>
-    <span><%= image_tag "Ruby-icon.svg", class:"filter-icon" %></span>
-    <span><%= image_tag "Rails-icon.svg", class:"filter-icon" %></span>
+    <span> <%= link_to "Remove filters", articles_path %></span>
     </div>
     </div>
     <div class="bar-section">

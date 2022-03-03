@@ -21,7 +21,6 @@ class Article < ApplicationRecord
   end
 
   def self.filter(filter_option)
-    articles = Article.where(category: filter_option)
+    articles = Article.where(category: filter_option.downcase)
   end
-
 end
