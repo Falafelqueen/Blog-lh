@@ -5,7 +5,7 @@
   <%= f.input :title %>
   <%= f.input :subtitle %>
   <%= f.rich_text_area :rich_body %>
-  <%= f.input :category %>
+  <%= f.input :category, collection: ["Undefined", "JS", "Test", "Ruby"], include_blank: false %>
   <h5>Resources</h5>
   <%= f.simple_fields_for :resources do |resource| %>
     <div class="fieldset-container">
