@@ -1,4 +1,3 @@
-
 <div class="article-show">
     <div class="article-head-text">
       <div class="info-line-small">
@@ -68,8 +67,8 @@
 
   <%= link_to "Back", articles_path %>
 
-  <div class="show-controls btn-normal"><p>Edit</p></div>
-
+  <div class="show-controls btn-normal">
+    <%= link_to "Edit", edit_article_path(@article) %>
+  </div>
 </div>
-
 </div>

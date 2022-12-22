@@ -1,9 +1,22 @@
-<div class="container">
-<%= simple_form_for @article do |f|%>
-<%= f.input :title %>
-<%= f.input :subtitle %>
-<%= f.input :content,  input_html: {class: "input-for-article-text"}%>
-<%= f.input :category %>
-<%= f.submit "Edit" %>
+<h1>Create a new article</h1>
+
+<%= simple_form_for @article, method: :put do |f|%>
+  <%= f.input :title %>
+  <%= f.input :subtitle %>
+  <%= f.rich_text_area :rich_body %>
+  <%= f.input :category %>
+  <h5>Resources</h5>
+  <%= f.simple_fields_for :resources do |resource| %>
+    <div class="fieldset-container">
+      <fieldset id="0">
+        <%= resource.input :title %>
+        <%= resource.input :link %>
+  <% end %>
+      </fieldset>
+    </div>
+  <div class="d-flex justify-content-end">
+    <div id="addResource" class="p-2 btn-icon"><i class="fas fa-plus"></i> Add another resource</div>
+    <div id="removeResource" class="p-2 btn-icon"><i class="fas fa-trash-alt"></i></div>
+  </div>
+  <%= f.submit "Post", class: "btn-normal" %>
 <% end %>
-</div>

@@ -22,10 +22,10 @@
           <p><%=@article_newest.user.username %></p>
           <p><%= @article_newest.created_at.strftime("%d-%m-%Y") %></p>
           <span><%= image_tag "Comment-icon.svg", class: "icon-small" %></span>
-          <p>5</p>
+          <p>2</p>
         </div>
-        <% link_to article_path(@article_newest) do %>
-        <h3><%= @article_newest.title %></h3>
+        <%= link_to article_path(@article_newest) do %>
+          <h3><%= @article_newest.title %></h3>
         <% end %>
         <div class="bottom-right">
           <div class="short-line"></div>
